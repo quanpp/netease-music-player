@@ -1,0 +1,68 @@
+input{
+  outline: none;
+}
+:root {
+  --bg: #0f0f13;
+  --bg-soft: #1a1a20;
+  --bg-hover: #24242c;
+  --border: #2a2a32;
+  --text: #e8e8ea;
+  --text-dim: #8a8a95;
+  --text-faint: #5c5c66;
+  --primary: #e94b6a;
+  --primary-soft: rgba(233, 75, 106, 0.12);
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* 通用歌曲列表 */
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s;
+}
+
+.song-item:hover {
+  background: var(--bg-hover);
+}
+
+.song-item.active {
+  color: var(--primary);
+}
+
+.song-item .artist {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin-left: auto;
+}
